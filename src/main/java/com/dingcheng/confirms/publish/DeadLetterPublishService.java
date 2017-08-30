@@ -6,11 +6,10 @@ import org.springframework.stereotype.Service;
 
 @Service("deadLetterPublishService")
 public class DeadLetterPublishService {
-	@Autowired
-	private RabbitTemplate rmqpTemplate;
-    
-    public void send(String routingKey, Object message) {  
-    	rmqpTemplate.convertAndSend(routingKey, message);
-    }  
-    
+  @Autowired
+  private RabbitTemplate rmqpTemplate;
+
+  public void send(String routingKey, Object message) {
+    rmqpTemplate.convertAndSend(routingKey, message);
+  }
 }

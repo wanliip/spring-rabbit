@@ -25,6 +25,7 @@
 		confirm-callback="confirmCallBackListener"
 		return-callback="returnCallBackListener" 
 		mandatory="true" 
+		message-converter="jsonMessageConverter" 
 	/>
 	
 	<rabbit:queue name="CONFIRM_TEST" />
